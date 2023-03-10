@@ -1,0 +1,74 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: lightgrey;
+
+  font-size: 1.3rem;
+}
+
+.accordion-container {
+  width: max(80vw, 250px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: bisque;
+
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.input {
+  display: none;
+}
+
+.accordion-item__img {
+  display: none;
+}
+
+.accordion-item {
+  width: 100%;
+  background-color: seagreen;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.accordion-item__img {
+  height: 10rem;
+  border-radius: 0.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center;
+}
+
+.hater .accordion-item__img {
+  background-image: url('../assets/img/hatered.png');
+}
+
+.programmer .accordion-item__img {
+  background-image: url('../assets/img/in-front-of-pc.png');
+}
+
+.screamer .accordion-item__img {
+  background-image: url('../assets/img/screaming-guy.png');
+}
+
+.thoughtfull .accordion-item__img {
+  background-image: url('../assets/img/thoughtful.jpg');
+}
+
+.input:checked+.accordion-item__img {
+  display: block;
+}
+
+@keyframes unfold {
+  from {}
+  to {}
+}
