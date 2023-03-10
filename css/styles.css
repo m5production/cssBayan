@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -9,44 +13,95 @@ body {
   font-size: 1.3rem;
 }
 
+p {
+  margin: 0.5em 0;
+}
+
 .accordion-container {
-  width: max(80vw, 250px);
+  width: clamp(16rem, 80vw, 62rem);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
 
   background-color: bisque;
 
-  border-radius: 1rem;
-  padding: 1rem;
+  border-radius: 1em;
+  padding: 1em;
 }
+
+/* label */
+
+.accordion-item__label {
+  display: block;
+
+  padding: 0.5em;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+/* input */
 
 .input {
-  display: none;
-}
-
-.accordion-item__img {
   display: none;
 }
 
 .accordion-item {
   width: 100%;
   background-color: seagreen;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
+}
+
+.accordion-item:not(:first-child) {
+  border-top: 1px solid black;
+}
+
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.text-marker {
+  width: 1em;
+  height: 1em;
+  
+  flex-shrink: 0;
+
+  background-image: url('../assets/img/x-mark.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transform: rotate(45deg);
+  opacity: 0;
+
+  transition: 0.3s;
 }
 
 .accordion-item__img {
-  height: 10rem;
+  height: 0;
+
   border-radius: 0.5rem;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: white;
+  background-color: transparent;
   background-position: center;
+
+  opacity: 0;
+  transition: 0.3s;
+
+  cursor: pointer;
 }
+
+/*============= imgs ================*/
 
 .hater .accordion-item__img {
   background-image: url('../assets/img/hatered.png');
@@ -62,13 +117,4 @@ body {
 
 .thoughtfull .accordion-item__img {
   background-image: url('../assets/img/thoughtful.jpg');
-}
-
-.input:checked+.accordion-item__img {
-  display: block;
-}
-
-@keyframes unfold {
-  from {}
-  to {}
 }

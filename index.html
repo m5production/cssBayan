@@ -1,38 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
   <title>Accordion on pure css</title>
 </head>
+
 <body>
   <div class="accordion-container">
 
     <div class="accordion-item hater">
-      <label class="accordion-item__text" for="hater">Hatred is a bad feeling</label>
       <input class="input hater-input" id="hater" type="radio" name="accordion" checked>
-      <div class="accordion-item__img"></div>
+      <label class="accordion-item__label" for="hater">
+        <div class="text-container">
+          <p>Hatred is a bad feeling</p>
+          <div class="text-marker"></div>
+        </div>
+        <div class="accordion-item__img"></div>
+      </label>
     </div>
 
     <div class="accordion-item programmer">
-      <label class="accordion-item__text" for="programmer">Programmers need more physical loads</label>
       <input class="input programmer-input" id="programmer" type="radio" name="accordion">
-      <div class="accordion-item__img"></div>
+      <label class="accordion-item__label" for="programmer">
+        <div class="text-container">
+          <p>Programmers need more physical loads</p>
+          <div class="text-marker"></div>
+        </div>
+        <div class="accordion-item__img"></div>
+      </label>
     </div>
 
     <div class="accordion-item screamer">
-      <label class="accordion-item__text" for="screamer">Keep kind in your mind</label>
       <input class="input screamer-input" id="screamer" type="radio" name="accordion">
-      <div class="accordion-item__img"></div>
+      <label class="accordion-item__label" for="screamer">
+        <div class="text-container">
+          <p>Keep kind in your mind</p>
+          <div class="text-marker"></div>
+        </div>
+        <div class="accordion-item__img"></div>
+      </label>
     </div>
 
     <div class="accordion-item thoughtfull">
-      <label class="accordion-item__text" for="thoughtfull">How to make an accordion?</label>
       <input class="input thoughtfull-input" id="thoughtfull" type="radio" name="accordion">
-      <div class="accordion-item__img"></div>
+      <label class="accordion-item__label" for="thoughtfull">
+        <div class="text-container">
+          <p>How to make an accordion?</p>
+          <div class="text-marker"></div>
+        </div>
+        <div class="accordion-item__img"></div>
+      </label>
     </div>
   </div>
 </body>
+
 </html>

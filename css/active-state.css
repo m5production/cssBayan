@@ -1,0 +1,49 @@
+.input:checked~.accordion-item__label .accordion-item__img {
+  height: 10em;
+  opacity: 1;
+}
+
+.input:checked~.accordion-item__label .text-container {
+  color: blue;
+}
+
+.input:checked~.accordion-item__label .text-marker {
+  transform: rotate(0);
+}
+
+@media (hover: hover) {
+  .accordion-container:hover .text-container {
+    color: blue;
+  }
+
+  .accordion-container:hover .accordion-item__label .text-marker {
+    opacity: 1;
+  }
+
+  .accordion-item:hover .text-marker {
+    transform: rotate(0);
+  }
+
+  .accordion-item:hover .accordion-item__img {
+    height: 10em;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    font-size: 2.3rem;
+  }
+}
