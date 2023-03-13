@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  background-color: lightgrey;
+
+  font-size: 1.3rem;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+.accordion-container {
+  width: clamp(16rem, 80vw, 62rem);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: bisque;
+
+  border-radius: 1em;
+  padding: 1em;
+}
+
+/* label */
+
+.accordion-item__label {
+  display: block;
+
+  padding: 0.5em;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+/* input */
+
+.input {
+  display: none;
+}
+
+.accordion-item {
+  width: 100%;
+  background-color: seagreen;
+}
+
+.accordion-item:not(:first-child) {
+  border-top: 1px solid black;
+}
+
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.text-marker {
+  width: 1em;
+  height: 1em;
+  
+  flex-shrink: 0;
+
+  background-image: url('../assets/img/x-mark.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transform: rotate(45deg);
+  opacity: 0;
+
+  transition: 0.3s;
+}
+
+.accordion-item__img {
+  height: 0;
+
+  border-radius: 0.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+
+  opacity: 0;
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+/*============= imgs ================*/
+
+.hater .accordion-item__img {
+  background-image: url('../assets/img/hatered.png');
+}
+
+.programmer .accordion-item__img {
+  background-image: url('../assets/img/in-front-of-pc.png');
+}
+
+.screamer .accordion-item__img {
+  background-image: url('../assets/img/screaming-guy.png');
+}
+
+.thoughtfull .accordion-item__img {
+  background-image: url('../assets/img/thoughtful.jpg');
+}
